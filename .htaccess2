@@ -1,0 +1,5 @@
+
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^erp\.hi\-code\.my\.id$
+RewriteRule ^/?$ "https\:\/\/erp\.hi\-code\.my\.id\/" [R=301,L]
+
