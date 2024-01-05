@@ -18,7 +18,7 @@ class CreateGudangModelsTable extends Migration
             $table->string('nama_barang');
             $table->integer('harga_pk');
             $table->integer('margin');
-            $table->integer('harga_up')
+            $table->integer('harga_up');
             $table->integer('stok');
             $table->integer('sub_totalpk');
             $table->integer('sub_total');

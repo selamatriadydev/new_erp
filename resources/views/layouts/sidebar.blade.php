@@ -21,6 +21,12 @@
                   </a>
                 </li>
                 <li>
+                  <a href="{{route('cabang.index')}}">
+                    <i class="now-ui-icons business_badge"></i>
+                    <p>Cabang</p>
+                  </a>
+                </li>
+                <li>
                   <a href="{{route('master')}}">
                     <i class="now-ui-icons design_app"></i>
                     <p>Inventory</p>

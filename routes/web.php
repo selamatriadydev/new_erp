@@ -31,6 +31,7 @@ Route::group(['middleware' => 'auth'], function () {
 
 
 });
+Route::resource('cabang', 'CabangController');
     Route::resource('order','OrderController');
     Route::resource('item','ItemController');
     Route::resource('paket','PaketController');
@@ -290,7 +291,7 @@ Route::group(['middleware' => ['helpdesk']], function () {
     Route::resource('akun', 'AkunController');
     Route::get('akun/{id}/aktifuser','AkunController@aktifuser')->name('akun.aktifuser');
     Route::get('akun/{id}/nonaktifuser','AkunController@nonaktifuser')->name('akun.nonaktifuser');
-    Route::resource('cabang', 'CabangController');
+    
     Route::resource('penyebab', 'PenyebabController');
     Route::resource('akibat', 'AkibatController');
     Route::post('getpercabang','HelpdeskController@getpercabang')->name('getcabang');
@@ -347,3 +348,7 @@ Route::group(['middleware' => ['supplychain'] ], function () {
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
